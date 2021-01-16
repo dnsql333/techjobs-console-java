@@ -95,16 +95,13 @@ public class JobData {
         ArrayList<HashMap<String, String>> matchList = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
-//            String searchResult = row.get(searchTerm);
             for (Map.Entry<String, String> i : row.entrySet()) {
                 String searchResult = i.getValue();
                 if (searchResult.contains(searchTerm)){
                     matchList.add(row);
+                    break;
                 }
             }
-//            String searchResult = row.get(searchTerm);
-//            if (searchResult.contains(searchTerm)) {
-//                matchList.add(searcbResult)
         }
         return matchList;
     }
